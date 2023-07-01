@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    p @articles
     render json: @articles, status: :ok
   end
 

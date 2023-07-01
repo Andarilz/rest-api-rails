@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Articles", type: :request do
+RSpec.describe ArticlesController do
 
   describe "#index" do
 
@@ -28,10 +28,10 @@ RSpec.describe "Articles", type: :request do
                   attributes: {
                     title: article.title,
                     content: article.content,
-                    slag: article.slag
+                    slug: article.slug
                   }
                 }
-        ]
+              ]
       )
 
     end

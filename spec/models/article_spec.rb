@@ -30,26 +30,26 @@ RSpec.describe Article, type: :model do
 
     end
 
-    it "invalid slag" do
+    it "invalid slug" do
 
-      article.slag = ""
+      article.slug = ""
 
       expect(article).not_to be_valid
-      expect(article.errors[:slag]).to include("can't be blank")
+      expect(article.errors[:slug]).to include("can't be blank")
 
     end
 
-    it "uniq slag" do
+    it "uniq slug" do
 
-      article_first = create(:article, title: "Test1", content: "Test1", slag: "Test1")
+      article_first = create(:article, title: "Test1", content: "Test1", slug: "Test1")
 
       expect(article_first).to be_valid
 
-      article_second = build(:article, title: "Test1", content: "Test1", slag: "Test1")
+      article_second = build(:article, title: "Test1", content: "Test1", slug: "Test1")
 
       expect(article_second).not_to be_valid
 
-      expect(article_second.errors[:slag]).to include('has already been taken')
+      expect(article_second.errors[:slug]).to include('has already been taken')
 
     end
 
