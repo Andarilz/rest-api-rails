@@ -2,8 +2,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    p @articles
-    render json: @articles, status: :ok
+    render json: serializer.new(@articles), status: :ok
   end
 
   def show
@@ -11,6 +10,10 @@ class ArticlesController < ApplicationController
     if @article
       render json: @article, status: :ok
     end
+  end
+
+  def serializer
+    ArticleSerializer
   end
 
 end
