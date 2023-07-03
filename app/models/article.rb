@@ -4,4 +4,9 @@ class Article < ApplicationRecord
   validates :content, presence: :true
   validates :slug, presence: :true, uniqueness: :true
 
+
+  def self.recent
+    order(created_at: :desc)
+  end
+
 end
