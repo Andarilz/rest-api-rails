@@ -27,7 +27,12 @@ gem 'jsom-pagination'
 
 gem 'jsonapi_errors_handler'
 
-  gem 'octokit', '~> 4.0'
+gem 'octokit', '~> 4.0'
+
+gem "net-http"
+gem "net-smtp"
+gem "net-imap"
+gem "uri", "0.12.1"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
