@@ -29,6 +29,9 @@ gem 'jsonapi_errors_handler'
 
 gem 'octokit', '~> 4.0'
 
+gem 'faraday-retry'
+
+
 gem "net-http"
 gem "net-smtp"
 gem "net-imap"
