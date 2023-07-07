@@ -54,6 +54,12 @@ describe UserAuthenticator do
 
       end
 
+      it "should reuse already resigstered" do
+        user = create(:user, user_data)
+        expect{ subject }.not_to change(User, :count)
+        expect(authenticator.user).to eq(user)
+      end
+
     end
 
   end
